@@ -19,7 +19,7 @@ Patch2:		%{name}-expat.patch
 URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
 BuildRequires:	autoconf
 BuildRequires:	automake
-Buildrequires:	expat-devel >= 1.95.6-2
+BuildRequires:	expat-devel >= 1.95.6-2
 %{?_with_javascript:BuildRequires:	js-devel}
 BuildRequires:	libtool
 BuildRequires:	perl-XML-Parser
