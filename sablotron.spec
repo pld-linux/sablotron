@@ -3,7 +3,7 @@ Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Name:		sablotron
 Version:	0.60
-Release:	1
+Release:	2
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Group(de):	Applikationen/Publizieren/XML
@@ -61,7 +61,7 @@ Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Requires:	%{name} = %{version}
+Requires:	%{name}-devel = %{version}
 
 %description static
 Sablotron static library.
