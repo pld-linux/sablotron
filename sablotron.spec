@@ -109,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n expat
 %defattr(644,root,root,755)
-%{_libdir}/libxml*.so.*.*
+%attr(755,root,root) %{_libdir}/libxml*.so.*.*
 
 %files -n expat-devel
 %defattr(644,root,root,755)
