@@ -72,7 +72,7 @@ Bioblioteka statyczna projektu Sablotron.
 %setup0 -q -n %{aname}-%{version}
 
 %build
-export CXXFLAGS="$CXXFLAGS -DUTF8_ICONV_CAST_OK"
+export CXXFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -DUTF8_ICONV_CAST_OK"
 %configure
 %{__make}
 
@@ -94,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README* sablot_man.html*
+%doc *.gz sablot_man.html*
 %attr(755,root,root) %{_bindir}/sabcmd
 %attr(755,root,root) %{_libdir}/libsablot.so.*.*
 
