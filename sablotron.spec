@@ -91,7 +91,7 @@ Biblioteka statyczna projektu Sablotron.
 
 %build
 rm -f tools/missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 automake -a -c --foreign
