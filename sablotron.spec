@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _with_javascript	- enable experimental JavaScript XSLT extension
+#
 Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Summary(pt_BR):	Processador de XSL
@@ -8,7 +12,6 @@ License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
 Source0:	http://download-2.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
-Source1:	sablot_man.html
 Patch0:		%{name}-ac_fix.patch
 Patch1:		%{name}-am15.patch
 Patch2:		%{name}-expat.patch
@@ -16,6 +19,7 @@ URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
 BuildRequires:	autoconf
 BuildRequires:	automake
 Buildrequires:	expat-devel >= 1.95.6-2
+%{?_with_javascript:BuildRequires:	js-devel}
 BuildRequires:	libtool
 BuildRequires:	perl-XML-Parser
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -70,7 +74,6 @@ Arquivos de inclusão do %{name}.
 
 %package static
 Summary:	Sablotron static library
-Summary(es):	%{name} static libs
 Summary(pl):	Biblioteka statyczna Sablotrona
 Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com a biblioteca %{name}
 Group:		Development/Libraries
@@ -100,7 +103,9 @@ rm -f tools/missing
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 CXX=%{__cc}
 export CXXFLAGS CXX
-%configure
+%{?_with_javascript:CPPFLAGS="-I/usr/include/js"}
+%configure \
+	%{?_with_javascript:--enable-javascript}
 %{__make}
 
 %install
@@ -108,8 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_includedir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-install %{SOURCE1} .
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -119,7 +122,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README sablot_man.html
+%doc README RELEASE doc/misc/{DEBUGGER,NOTES} doc/apidoc/{sablot,sxp}
+%if 0%{?_with_javascript:1}
+%doc README_JS doc/apidoc/jsdom-ref
+%endif
 %attr(755,root,root) %{_bindir}/sabcmd
 %attr(755,root,root) %{_libdir}/libsablot.so.*.*
 %{_mandir}/man1/*
