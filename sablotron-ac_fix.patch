@@ -1,0 +1,14 @@
+--- Sablot-0.71/configure.in~	Mon Nov  5 14:44:02 2001
++++ Sablot-0.71/configure.in	Thu Nov  8 16:10:16 2001
+@@ -59,11 +59,6 @@
+ AC_PROG_CXX()
+ AC_PROG_CXXCPP()
+ 
+-dnl switch checking
+-AC_ARG_ENABLE(warnings,
+-[  --enable-warnings       display all warning while compiling])
+-AM_CONDITIONAL(AM_WARNINGS, test x$enable_warnings = xyes)
+-
+ AC_ARG_ENABLE(adding-meta, 
+ [  --disable-adding-meta   do not output the META html tag])
+ if test x$enable_adding_meta = xno; then
