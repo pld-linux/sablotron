@@ -1,0 +1,33 @@
+diff -Nur --exclude *~ Sablot-0.42/Makefile.in Sablot-0.42.new/Makefile.in
+--- Sablot-0.42/Makefile.in	Wed Jul 19 14:42:36 2000
++++ Sablot-0.42.new/Makefile.in	Fri Jul 21 16:41:01 2000
+@@ -37,20 +37,20 @@
+ install: $(PRE_INSTALL) install_sablot
+ 
+ install_sablot:
+-	@$(INSTALL) bin/sabcmd $(bin_dir)
+-	@$(INSTALL) include/sablot.h include/shandler.h $(include_dir)
+-	@$(INSTALL) lib/libsablot.so.0.4 $(lib_dir) &&\
+-        cd $(lib_dir) &&\
++	@$(INSTALL) bin/sabcmd $(DESTDIR)$(bin_dir)
++	@$(INSTALL) include/sablot.h include/shandler.h $(DESTDIR)$(include_dir)
++	@$(INSTALL) lib/libsablot.so.0.4 $(DESTDIR)$(lib_dir) &&\
++        cd $(DESTDIR)$(lib_dir) &&\
+ 	ln -s -f libsablot.so.0.4 libsablot.so.0 &&\
+ 	ln -s -f libsablot.so.0 libsablot.so
+ 
+ install_expat:
+-	@$(INSTALL) lib/libxmlparse.so.1.0 $(lib_dir) &&\
+-	cd $(lib_dir) &&\
++	@$(INSTALL) lib/libxmlparse.so.1.0 $(DESTDIR)$(lib_dir) &&\
++	cd $(DESTDIR)$(lib_dir) &&\
+ 	ln -s -f libxmlparse.so.1.0 libxmlparse.so.1 &&\
+ 	ln -s -f libxmlparse.so.1 libxmlparse.so
+-	@$(INSTALL) lib/libxmltok.so.1.0 $(lib_dir) &&\
+-	cd $(lib_dir) &&\
++	@$(INSTALL) lib/libxmltok.so.1.0 $(DESTDIR)$(lib_dir) &&\
++	cd $(DESTDIR)$(lib_dir) &&\
+ 	ln -s -f libxmltok.so.1.0 libxmltok.so.1 &&\
+ 	ln -s -f libxmltok.so.1 libxmltok.so
+-	@$(INSTALL) include/xmlparse.h $(include_dir)
++	@$(INSTALL) include/xmlparse.h $(DESTDIR)$(include_dir)
