@@ -8,13 +8,13 @@ Summary(pt_BR):	Processador de XSL
 Name:		sablotron
 Version:	1.0.1
 Release:	1
-License:	Mozilla Public License Version 1.1 or GPL
+License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
 Source0:	http://download-1.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
 # Source0-md5:	8d06392ef2e46652bce1c5e2b68d0662
 Patch0:		%{name}-expat.patch
-URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
+URL:		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 BuildRequires:	autoconf >= 2.56
 BuildRequires:	automake
 BuildRequires:	expat-devel >= 1.95.6-2
