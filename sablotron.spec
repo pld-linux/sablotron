@@ -11,7 +11,7 @@ Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
-Source0:	http://download-2.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
+Source0:	http://download-1.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
 # Source0-md5:	8d06392ef2e46652bce1c5e2b68d0662
 Patch0:		%{name}-expat.patch
 URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
