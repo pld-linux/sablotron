@@ -12,8 +12,3 @@
  lib_LTLIBRARIES = libsablot.la
  
  libsablot_la_SOURCES = \
-@@ -67,4 +61,3 @@
- 
- libsablot_la_LDFLAGS = -version-info 71:0:71
- 
--
