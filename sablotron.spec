@@ -97,7 +97,7 @@ Biblioteka statyczna projektu Sablotron.
 %{__autoconf}
 %{__automake}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
-CXX=%{__cc}
+CXX="%{__cc}"
 export CXXFLAGS CXX
 %{?with_javascript:CPPFLAGS="-I/usr/include/js"}
 %configure \
