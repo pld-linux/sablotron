@@ -7,7 +7,9 @@ Release:	2
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Group(de):	Applikationen/Publizieren/XML
+Group(es):	Aplicaciones/EditoraciСn/XML
 Group(pl):	Aplikacje/Publikowanie/XML
+Group(pt_BR):	AplicaГУes/EditoraГЦo/XML
 Source0:	http://download.gingerall.cz/sablot/%{aname}-%{version}.tar.gz
 Source1:	sablot_man.html
 URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
@@ -44,8 +46,12 @@ Summary:	%{name} header files
 Summary(pl):	Pliki nagЁСwkowe %{name}
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -59,8 +65,12 @@ Summary:	Sablotron static library
 Summary(pl):	Biblioteka statyczna Sablotrona
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
