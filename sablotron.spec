@@ -54,13 +54,13 @@ Obsoletes:	libsablotron0-devel
 %description devel
 Sablotron header files.
 
-%description -l es devel
+%description devel -l es
 Archivos de inclusión del %{name}.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe projektu Sablotron.
 
-%description -l pt_BR devel
+%description devel -l pt_BR
 Salotron é um processador XSL implementado em C++.
 
 Arquivos de inclusão do %{name}.
@@ -76,10 +76,10 @@ Requires:	%{name}-devel = %{version}
 %description static
 Sablotron static library.
 
-%description -l es static
+%description static -l es
 Bibliotecas estáticas del %{name}.
 
-%description -l pl static
+%description static -l pl
 Bioblioteka statyczna projektu Sablotron.
 
 %prep
