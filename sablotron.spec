@@ -49,19 +49,19 @@ rozpowszechniania danych w standardzie XML.
 Salotron é um processador XSL implementado em C++.
 
 %package devel
-Summary:	%{name} header files
+Summary:	Header files for sablotron library
 Summary(es):	Archivos de inclusión del sablotron
-Summary(pl):	Pliki nag³ówkowe %{name}
+Summary(pl):	Pliki nag³ówkowe biblioteki sablotron
 Summary(pt_BR):	Arquivos de inclusão do sablotron
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	libsablotron0-devel
 
 %description devel
 Sablotron header files.
 
 %description devel -l es
-Archivos de inclusión del %{name}.
+Archivos de inclusión del sablotron.
 
 %description devel -l pl
 Pliki nag³ówkowe projektu Sablotron.
@@ -69,20 +69,20 @@ Pliki nag³ówkowe projektu Sablotron.
 %description devel -l pt_BR
 Salotron é um processador XSL implementado em C++.
 
-Arquivos de inclusão do %{name}.
+Arquivos de inclusão do sablotron.
 
 %package static
 Summary:	Sablotron static library
 Summary(pl):	Biblioteka statyczna Sablotrona
-Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com a biblioteca %{name}
+Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com a biblioteca sablotron
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Sablotron static library.
 
 %description static -l es
-Bibliotecas estáticas del %{name}.
+Bibliotecas estáticas del sablotron.
 
 %description static -l pl
 Biblioteka statyczna projektu Sablotron.
