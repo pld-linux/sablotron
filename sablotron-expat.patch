@@ -1,8 +1,8 @@
---- Sablot-0.97/src/engine/Makefile.am~	Sun Sep 15 14:35:10 2002
-+++ Sablot-0.97/src/engine/Makefile.am	Sun Sep 15 14:35:10 2002
-@@ -72,4 +72,4 @@
+--- Sablot-1.0.1/src/engine/Makefile.am.orig	2003-11-21 09:56:40.000000000 +0100
++++ Sablot-1.0.1/src/engine/Makefile.am	2003-12-14 02:56:04.020599008 +0100
+@@ -76,4 +76,5 @@
  	sabcfg.h
  
- libsablot_la_LDFLAGS = -version-info 97:0:97
--
+ libsablot_la_LDFLAGS = -version-info 100:1:100
 +libsablot_la_LIBADD = $(EXPAT_LIBS)
+ 
