@@ -111,7 +111,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_includedir}/s*
 %attr(755,root,root) %{_libdir}/libsablot.so
-%attr(755,root,root) %{_libdir}/libsablot.la
 
 %files -n expat
 %defattr(644,root,root,755)
