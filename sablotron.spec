@@ -12,6 +12,7 @@ License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
 Source0:	http://download-2.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
+# Source0-md5: 253d5e7738d85beecc2c274478431529
 Patch0:		%{name}-ac_fix.patch
 Patch1:		%{name}-am15.patch
 Patch2:		%{name}-expat.patch
