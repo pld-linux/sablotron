@@ -1,17 +1,18 @@
-%define aname	Sablot
 Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Name:		sablotron
-Version:	0.60
-Release:	2
+Version:	0.71
+Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Group(de):	Applikationen/Publizieren/XML
 Group(es):	Aplicaciones/Editoración/XML
 Group(pl):	Aplikacje/Publikowanie/XML
 Group(pt_BR):	Aplicações/Editoração/XML
-Source0:	http://download.gingerall.cz/sablot/%{aname}-%{version}.tar.gz
+Source0:	http://download.gingerall.cz/sablot/Sablot-%{version}.tar.gz
 Source1:	sablot_man.html
+Patch0:		%{name}-ac_fix.patch
+Patch1:		%{name}-am15.patch
 URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
 Buildrequires:	libstdc++-devel
 Buildrequires:	expat-devel >= 1.95.1
@@ -80,15 +81,17 @@ Sablotron static library.
 Bioblioteka statyczna projektu Sablotron.
 
 %prep
-%setup -q -n %{aname}-%{version}
+%setup -q -n Sablot-%{version}
+%patch0 -p1
+%patch1 -p1
 
 %build
-rm tools/missing
+rm -f tools/missing
 libtoolize --copy --force
 aclocal
 autoconf
 automake -a -c --foreign
-CXXFLAGS="%{rpmcflags} -DUTF8_ICONV_CAST_OK"; export CXXFLAGS
+CXXFLAGS="%{rpmcflags} -DUTF8_ICONV_CAST_OK -fno-rtti -fno-exceptions"; export CXXFLAGS
 %configure
 %{__make}
 
