@@ -61,6 +61,8 @@ Expat to parser XML 1.0 napisany w jêzyku C.
 %package -n expat-devel
 Summary:	expat header files
 Summary(pl):	Pliki nag³ówkowe expat
+Version:	%{expat_ver}
+Release:	1
 Group:		Development/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
