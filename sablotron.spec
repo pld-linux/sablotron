@@ -7,6 +7,7 @@ Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Source0:	http://download-2.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
+# Source0-md5:	faa64d8005e5bf8328faf85466d096e1
 Source1:	sablot_man.html
 Patch0:		%{name}-ac_fix.patch
 Patch1:		%{name}-am15.patch
