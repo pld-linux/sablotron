@@ -125,7 +125,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libs*.so
-%attr(755,root,root) %{_libdir}/libs*.la
+%{_libdir}/libs*.la
 %{_includedir}/s*
 
 %files static
