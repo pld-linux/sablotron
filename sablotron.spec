@@ -1,13 +1,14 @@
 Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
-Summary(pt_BR): Processador de XSL
+Summary(pt_BR):	Processador de XSL
 Name:		sablotron
-Version:	0.81
+Version:	0.82
 Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Group(de):	Applikationen/Publizieren/XML
 Group(es):	Aplicaciones/Editoración/XML
+Group(fr):	Aplicaciones/Édition/XML
 Group(pl):	Aplikacje/Publikowanie/XML
 Group(pt_BR):	Aplicações/Editoração/XML
 Source0:	http://download.gingerall.cz/sablot/Sablot-%{version}.tar.gz
@@ -48,15 +49,16 @@ Salotron é um processador XSL implementado em C++.
 
 %package devel
 Summary:	%{name} header files
-Summary(es): Archivos de inclusión del sablotron
+Summary(es):	Archivos de inclusión del sablotron
 Summary(pl):	Pliki nag³ówkowe %{name}
-Summary(pt_BR): Arquivos de inclusão do sablotron
+Summary(pt_BR):	Arquivos de inclusão do sablotron
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name} = %{version}
@@ -78,15 +80,16 @@ Arquivos de inclusão do %{name}.
 
 %package static
 Summary:	Sablotron static library
-Summary(es): %{name} static libs
+Summary(es):	%{name} static libs
 Summary(pl):	Biblioteka statyczna Sablotrona
-Summary(pt_BR): Bibliotecas estáticas para desenvolvimento com a biblioteca %{name}
+Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com a biblioteca %{name}
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name}-devel = %{version}
