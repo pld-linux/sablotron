@@ -5,12 +5,13 @@ Summary:	XSL Transformations Processor
 Summary(pl):	XSL Transformations Processor
 Name:		sablotron
 Version:	0.50
-Release:	1
+Release:	2
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Group(de):	Applikationen/Publizieren/XML
 Group(pl):	Aplikacje/Publikowanie/XML
 Source0:	http://www.gingerall.com/download/%{aname}-%{version}.tar.gz
+Source1:	sablot_man.html
 URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
 Buildrequires:	libstdc++-devel
 Buildrequires:	expat-devel >= 1.95.1
@@ -26,6 +27,17 @@ conforming to the W3C specification, which is available for public and
 can be used as a base for multi-platform XML data distribution
 systems.
 
+%description -l pl
+Sablotron jest prób± stworzenia szybkiego, ma³ego i przeno¶nego
+procesora XSLT. Potrzebowali¶my takiego procesora dla projektu
+Charlie, wiêc zdecydowali¶my siê stworzyæ odpowiedni. Sablotron jest
+projektem otwartym. Inni u¿ytkownicy i programi¶ci mog± partycypowaæ
+przy tworzeniu, ulepszaniu, a tak¿e jego testowaniu. Celem tego
+projektu jest stworzenie niezawodnego i szybkiego procesora XSLT,
+który bêdzie zgodny z normami W3C oraz dostêpny wszystkim, tak, by
+ka¿dy móg³ go u¿yæ jako podstawê wieloplatformowych systemów
+rozpowszechniania danych w standardzie XML.
+
 %package devel
 Summary:	%{name} header files
 Summary(pl):	Pliki nag³ówkowe %{name}
@@ -39,12 +51,13 @@ Requires:	%{name} = %{version}
 Sablotron header files.
 
 %description -l pl devel
-Pliki nag³ówkowe Sablotrona.
+Pliki nag³ówkowe projektu Sablotron.
 
 %package static
 Summary:	Sablotron static library
 Summary(pl):	Biblioteka statyczna Sablotrona
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -53,7 +66,7 @@ Requires:	%{name} = %{version}
 Sablotron static library.
 
 %description -l pl static
-Bioblioteka statyczna Sablotrona.
+Bioblioteka statyczna projektu Sablotron.
 
 %prep
 %setup0 -q -n %{aname}-%{version}
@@ -69,6 +82,10 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_includedir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+install %{SOURCE1} .
+
+gzip -9nf README sablot_man.html
+
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -77,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README* sablot_man.html*
 %attr(755,root,root) %{_bindir}/sabcmd
 %attr(755,root,root) %{_libdir}/libsablot.so.*.*
 
