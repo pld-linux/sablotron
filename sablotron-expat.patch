@@ -1,7 +1,18 @@
---- Sablot-0.90/src/engine/Makefile.am.wiget	Thu Mar  7 14:24:17 2002
-+++ Sablot-0.90/src/engine/Makefile.am	Thu Mar  7 14:25:06 2002
-@@ -65,3 +65,4 @@
- include_HEADERS = sablot.h shandler.h sdom.h sxpath.h
+--- Sablot-0.96/src/engine/Makefile.am~	Sun Sep 15 14:35:10 2002
++++ Sablot-0.96/src/engine/Makefile.am	Sun Sep 15 14:35:10 2002
+@@ -72,3 +72,4 @@
+ 	sabcfg.h
  
- libsablot_la_LDFLAGS = -version-info 90:0:90
+ libsablot_la_LDFLAGS = -version-info 96:0:96
 +libsablot_la_LIBADD = $(EXPAT_LIBS)
+--- Sablot-0.96/src/engine/parser.cpp~	Sun Sep 15 14:32:52 2002
++++ Sablot-0.96/src/engine/parser.cpp	Sun Sep 15 14:32:52 2002
+@@ -431,7 +431,7 @@
+         int code = XML_GetErrorCode(parser); 
+         Str eCodeStr, eNameStr;
+         eCodeStr = code;
+-        eNameStr = (char*) XML_ErrorString(code);
++        eNameStr = (char*) XML_ErrorString((XML_Error)code);
+         // XML_ParserFree(parser); -- done later
+         Err2T(this_, S, E_XML, eCodeStr, eNameStr);
+     }
