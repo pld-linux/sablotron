@@ -92,11 +92,12 @@ Biblioteka statyczna projektu Sablotron.
 %build
 rm -f tools/missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
-automake -a -c --foreign
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"; export CXXFLAGS
-CXX=%{__cc}; export CXX
+%{__automake}
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+CXX=%{__cc}
+export CXXFLAGS CXX
 %configure
 %{__make}
 
@@ -108,8 +109,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_includedir}}
 
 install %{SOURCE1} .
 
-gzip -9nf README sablot_man.html
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -118,13 +117,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz sablot_man.html*
+%doc README sablot_man.html
 %attr(755,root,root) %{_bindir}/sabcmd
 %attr(755,root,root) %{_libdir}/libsablot.so.*.*
-%attr(755,root,root) %{_libdir}/libs*.so
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libs*.so
 %attr(755,root,root) %{_libdir}/libs*.la
 %{_includedir}/s*
 
