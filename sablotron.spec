@@ -72,7 +72,7 @@ Bioblioteka statyczna projektu Sablotron.
 %setup0 -q -n %{aname}-%{version}
 
 %build
-export CXXFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -DUTF8_ICONV_CAST_OK"
+export CXXFLAGS="%{rpmcflags} -DUTF8_ICONV_CAST_OK"
 %configure
 %{__make}
 
