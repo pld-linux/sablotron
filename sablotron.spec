@@ -2,10 +2,11 @@ Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Summary(pt_BR):	Processador de XSL
 Name:		sablotron
-Version:	0.96
+Version:	0.97
 Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
+#Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
 Source0:	http://download-2.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
 Source1:	sablot_man.html
 Patch0:		%{name}-ac_fix.patch
@@ -14,8 +15,9 @@ Patch2:		%{name}-expat.patch
 URL:		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
 BuildRequires:	autoconf
 BuildRequires:	automake
-Buildrequires:	expat-devel >= 1.95.1
+Buildrequires:	expat-devel >= 1.95.6-2
 BuildRequires:	libtool
+BuildRequires:	perl-XML-Parser
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libsablotron0
 
@@ -124,6 +126,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/sablot-config
 %attr(755,root,root) %{_libdir}/libs*.so
 %{_libdir}/libs*.la
 %{_includedir}/s*
