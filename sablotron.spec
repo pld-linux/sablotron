@@ -93,7 +93,7 @@ Biblioteka statyczna projektu Sablotron.
 rm -f tools/missing
 libtoolize --copy --force
 aclocal
-autoconf
+%{__autoconf}
 automake -a -c --foreign
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"; export CXXFLAGS
 CXX=%{__cc}; export CXX
