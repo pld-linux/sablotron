@@ -6,11 +6,6 @@ Version:	0.82
 Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
-Group(de):	Applikationen/Publizieren/XML
-Group(es):	Aplicaciones/EditoraciСn/XML
-Group(fr):	Aplicaciones/иdition/XML
-Group(pl):	Aplikacje/Publikowanie/XML
-Group(pt_BR):	AplicaГУes/EditoraГЦo/XML
 Source0:	http://download.gingerall.cz/sablot/Sablot-%{version}.tar.gz
 Source1:	sablot_man.html
 Patch0:		%{name}-ac_fix.patch
@@ -53,14 +48,6 @@ Summary(es):	Archivos de inclusiСn del sablotron
 Summary(pl):	Pliki nagЁСwkowe %{name}
 Summary(pt_BR):	Arquivos de inclusЦo do sablotron
 Group:		Development/Libraries
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Obsoletes:	libsablotron0-devel
 
@@ -84,14 +71,6 @@ Summary(es):	%{name} static libs
 Summary(pl):	Biblioteka statyczna Sablotrona
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com a biblioteca %{name}
 Group:		Development/Libraries
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
