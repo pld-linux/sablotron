@@ -12,8 +12,3 @@
  lib_LTLIBRARIES = libsablot.la
  
  libsablot_la_SOURCES = \
-@@ -80,4 +72,3 @@
- 	sabcfg.h
- 
- libsablot_la_LDFLAGS = -version-info 96:0:96
--

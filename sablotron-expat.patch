@@ -1,18 +1,8 @@
---- Sablot-0.96/src/engine/Makefile.am~	Sun Sep 15 14:35:10 2002
-+++ Sablot-0.96/src/engine/Makefile.am	Sun Sep 15 14:35:10 2002
-@@ -72,3 +72,4 @@
+--- Sablot-0.97/src/engine/Makefile.am~	Sun Sep 15 14:35:10 2002
++++ Sablot-0.97/src/engine/Makefile.am	Sun Sep 15 14:35:10 2002
+@@ -72,4 +72,4 @@
  	sabcfg.h
  
- libsablot_la_LDFLAGS = -version-info 96:0:96
+ libsablot_la_LDFLAGS = -version-info 97:0:97
+-
 +libsablot_la_LIBADD = $(EXPAT_LIBS)
---- Sablot-0.96/src/engine/parser.cpp~	Sun Sep 15 14:32:52 2002
-+++ Sablot-0.96/src/engine/parser.cpp	Sun Sep 15 14:32:52 2002
-@@ -431,7 +431,7 @@
-         int code = XML_GetErrorCode(parser); 
-         Str eCodeStr, eNameStr;
-         eCodeStr = code;
--        eNameStr = (char*) XML_ErrorString(code);
-+        eNameStr = (char*) XML_ErrorString((XML_Error)code);
-         // XML_ParserFree(parser); -- done later
-         Err2T(this_, S, E_XML, eCodeStr, eNameStr);
-     }
