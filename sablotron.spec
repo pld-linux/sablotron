@@ -2,8 +2,8 @@ Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Summary(pt_BR):	Processador de XSL
 Name:		sablotron
-Version:	0.82
-Release:	2
+Version:	0.90
+Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
 Source0:	http://download.gingerall.cz/sablot/Sablot-%{version}.tar.gz
