@@ -2,11 +2,11 @@ Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Summary(pt_BR):	Processador de XSL
 Name:		sablotron
-Version:	0.82
-Release:	2
+Version:	0.90
+Release:	1
 License:	Mozilla Public License Version 1.1 or GPL
 Group:		Applications/Publishing/XML
-Source0:	http://download.gingerall.cz/sablot/Sablot-%{version}.tar.gz
+Source0:	http://download-2.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
 Source1:	sablot_man.html
 Patch0:		%{name}-ac_fix.patch
 Patch1:		%{name}-am15.patch
@@ -36,7 +36,7 @@ Charlie, wiêc zdecydowali¶my siê stworzyæ odpowiedni. Sablotron jest
 projektem otwartym. Inni u¿ytkownicy i programi¶ci mog± partycypowaæ
 przy tworzeniu, ulepszaniu, a tak¿e jego testowaniu. Celem tego
 projektu jest stworzenie niezawodnego i szybkiego procesora XSLT,
-który bêdzie zgodny z normami W3C oraz dostêpny wszystkim, tak, by
+który bêdzie zgodny z normami W3C oraz dostêpny wszystkim tak, by
 ka¿dy móg³ go u¿yæ jako podstawê wieloplatformowych systemów
 rozpowszechniania danych w standardzie XML.
 
@@ -81,7 +81,7 @@ Sablotron static library.
 Bibliotecas estáticas del %{name}.
 
 %description static -l pl
-Bioblioteka statyczna projektu Sablotron.
+Biblioteka statyczna projektu Sablotron.
 
 %prep
 %setup -q -n Sablot-%{version}
@@ -110,11 +110,11 @@ install %{SOURCE1} .
 
 gzip -9nf README sablot_man.html
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
