@@ -1,0 +1,19 @@
+--- Sablot-0.71/src/engine/Makefile.am~	Mon Nov  5 14:44:02 2001
++++ Sablot-0.71/src/engine/Makefile.am	Thu Nov  8 16:13:43 2001
+@@ -1,11 +1,5 @@
+ EXPATH = @EXPATH@
+ 
+-if AM_WARNINGS
+-CPPFLAGS = @CPPFLAGS@ -Wall
+-else
+-CPPFLAGS = @CPPFLAGS@
+-endif
+-
+ lib_LTLIBRARIES = libsablot.la
+ 
+ libsablot_la_SOURCES = \
+@@ -67,4 +61,3 @@
+ 
+ libsablot_la_LDFLAGS = -version-info 71:0:71
+ 
+-
