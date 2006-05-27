@@ -1,0 +1,10 @@
+--- Sablot-1.0.2/src/engine/Makefile.am.orig	2004-12-29 14:36:45.000000000 +0100
++++ Sablot-1.0.2/src/engine/Makefile.am	2006-05-27 17:30:27.740168750 +0200
+@@ -4,6 +4,7 @@
+ 
+ lib_LTLIBRARIES = libsablot.la
+ 
++libsablot_la_LIBADD = @ICONV_LIB@ @EXPAT_LIBS@ @OTHER_LIBS@
+ libsablot_la_SOURCES = \
+         arena.h \
+         base.h \
