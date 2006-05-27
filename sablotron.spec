@@ -6,14 +6,13 @@ Summary:	XSL Transformations Processor
 Summary(pl):	Procesor Transformacji XSL
 Summary(pt_BR):	Processador de XSL
 Name:		sablotron
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
 Source0:	http://download-1.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
-# Source0-md5:	8d06392ef2e46652bce1c5e2b68d0662
-Patch0:		%{name}-expat.patch
+# Source0-md5:	12243bc21b149cad89e98bc89f9c103e
 URL:		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 BuildRequires:	autoconf >= 2.56
 BuildRequires:	automake
@@ -89,7 +88,6 @@ Biblioteka statyczna projektu Sablotron.
 
 %prep
 %setup -q -n Sablot-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
