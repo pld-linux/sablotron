@@ -13,6 +13,7 @@ Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
 Source0:	http://download-1.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
 # Source0-md5:	12243bc21b149cad89e98bc89f9c103e
+Patch0:		%{name}-link.patch
 URL:		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 BuildRequires:	autoconf >= 2.56
 BuildRequires:	automake
@@ -20,8 +21,8 @@ BuildRequires:	expat-devel >= 1.95.6-2
 %{?with_javascript:BuildRequires:	js-devel}
 BuildRequires:	libtool
 BuildRequires:	perl-XML-Parser
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libsablotron0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Sablotron is an attempt to develop fast, compact and portable XSLT
@@ -54,6 +55,9 @@ Summary(pl):	Pliki nag³ówkowe biblioteki sablotron
 Summary(pt_BR):	Arquivos de inclusão do sablotron
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	expat-devel >= 1.95.6-2
+%{?with_javascript:Requires:	js-devel}
+Requires:	libstdc++-devel
 Obsoletes:	libsablotron0-devel
 
 %description devel
@@ -88,6 +92,7 @@ Biblioteka statyczna projektu Sablotron.
 
 %prep
 %setup -q -n Sablot-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -95,11 +100,9 @@ Biblioteka statyczna projektu Sablotron.
 %{__autoconf}
 %{__automake}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
-CXX="%{__cc}"
-export CXXFLAGS CXX
 %{?with_javascript:CPPFLAGS="-I/usr/include/js"}
 %configure \
-	%{?with_javascript:--enable-javascript}
+	%{?with_javascript:--with-js}
 %{__make}
 
 %install
@@ -109,6 +112,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_includedir}}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm -r $RPM_BUILD_ROOT%{_datadir}/doc/html
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -117,21 +122,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README RELEASE doc/misc/{DEBUGGER,NOTES} doc/apidoc/{sablot,sxp}
-%if %{with javascript}
-%doc README_JS doc/apidoc/jsdom-ref
-%endif
+%doc README RELEASE doc/misc/{DEBUGGER,NOTES} %{?with_javascript:README_JS}
 %attr(755,root,root) %{_bindir}/sabcmd
-%attr(755,root,root) %{_libdir}/libsablot.so.*.*
+%attr(755,root,root) %{_libdir}/libsablot.so.*.*.*
 %{_mandir}/man1/*
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/apidoc/{sablot,sxp} %{?with_javascript:doc/apidoc/jsdom-ref}
 %attr(755,root,root) %{_bindir}/sablot-config
-%attr(755,root,root) %{_libdir}/libs*.so
-%{_libdir}/libs*.la
-%{_includedir}/s*
+%attr(755,root,root) %{_libdir}/libsablot.so
+%{_libdir}/libsablot.la
+%{_includedir}/s*.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libsablot.a
