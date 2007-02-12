@@ -3,8 +3,8 @@
 %bcond_with	javascript	# enable experimental JavaScript XSLT extension
 #
 Summary:	XSL Transformations Processor
-Summary(pl.UTF-8):   Procesor Transformacji XSL
-Summary(pt_BR.UTF-8):   Processador de XSL
+Summary(pl.UTF-8):	Procesor Transformacji XSL
+Summary(pt_BR.UTF-8):	Processador de XSL
 Name:		sablotron
 Version:	1.0.2
 Release:	1
@@ -50,9 +50,9 @@ Salotron é um processador XSL implementado em C++.
 
 %package devel
 Summary:	Header files for sablotron library
-Summary(es.UTF-8):   Archivos de inclusión del sablotron
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki sablotron
-Summary(pt_BR.UTF-8):   Arquivos de inclusão do sablotron
+Summary(es.UTF-8):	Archivos de inclusión del sablotron
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki sablotron
+Summary(pt_BR.UTF-8):	Arquivos de inclusão do sablotron
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel >= 1.95.6-2
@@ -76,8 +76,8 @@ Arquivos de inclusão do sablotron.
 
 %package static
 Summary:	Sablotron static library
-Summary(pl.UTF-8):   Biblioteka statyczna Sablotrona
-Summary(pt_BR.UTF-8):   Bibliotecas estáticas para desenvolvimento com a biblioteca sablotron
+Summary(pl.UTF-8):	Biblioteka statyczna Sablotrona
+Summary(pt_BR.UTF-8):	Bibliotecas estáticas para desenvolvimento com a biblioteca sablotron
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
