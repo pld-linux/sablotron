@@ -1,6 +1,6 @@
 Summary:	XSL Transformations Processor
-Summary(pl):	Procesor Transformacji XSL
-Summary(pt_BR):	Processador de XSL
+Summary(pl.UTF-8):   Procesor Transformacji XSL
+Summary(pt_BR.UTF-8):   Processador de XSL
 Name:		sablotron
 Version:	0.90
 Release:	1
@@ -29,25 +29,25 @@ conforming to the W3C specification, which is available for public and
 can be used as a base for multi-platform XML data distribution
 systems.
 
-%description -l pl
-Sablotron jest prób± stworzenia szybkiego, ma³ego i przeno¶nego
-procesora XSLT. Potrzebowali¶my takiego procesora dla projektu
-Charlie, wiêc zdecydowali¶my siê stworzyæ odpowiedni. Sablotron jest
-projektem otwartym. Inni u¿ytkownicy i programi¶ci mog± partycypowaæ
-przy tworzeniu, ulepszaniu, a tak¿e jego testowaniu. Celem tego
+%description -l pl.UTF-8
+Sablotron jest prÃ³bÄ… stworzenia szybkiego, maÅ‚ego i przenoÅ›nego
+procesora XSLT. PotrzebowaliÅ›my takiego procesora dla projektu
+Charlie, wiÄ™c zdecydowaliÅ›my siÄ™ stworzyÄ‡ odpowiedni. Sablotron jest
+projektem otwartym. Inni uÅ¼ytkownicy i programiÅ›ci mogÄ… partycypowaÄ‡
+przy tworzeniu, ulepszaniu, a takÅ¼e jego testowaniu. Celem tego
 projektu jest stworzenie niezawodnego i szybkiego procesora XSLT,
-który bêdzie zgodny z normami W3C oraz dostêpny wszystkim, tak, by
-ka¿dy móg³ go u¿yæ jako podstawê wieloplatformowych systemów
+ktÃ³ry bÄ™dzie zgodny z normami W3C oraz dostÄ™pny wszystkim, tak, by
+kaÅ¼dy mÃ³gÅ‚ go uÅ¼yÄ‡ jako podstawÄ™ wieloplatformowych systemÃ³w
 rozpowszechniania danych w standardzie XML.
 
-%description -l pt_BR
-Salotron é um processador XSL implementado em C++.
+%description -l pt_BR.UTF-8
+Salotron Ã© um processador XSL implementado em C++.
 
 %package devel
 Summary:	%{name} header files
-Summary(es):	Archivos de inclusión del sablotron
-Summary(pl):	Pliki nag³ówkowe %{name}
-Summary(pt_BR):	Arquivos de inclusão do sablotron
+Summary(es.UTF-8):   Archivos de inclusiÃ³n del sablotron
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe %{name}
+Summary(pt_BR.UTF-8):   Arquivos de inclusÃ£o do sablotron
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Obsoletes:	libsablotron0-devel
@@ -55,32 +55,32 @@ Obsoletes:	libsablotron0-devel
 %description devel
 Sablotron header files.
 
-%description devel -l es
-Archivos de inclusión del %{name}.
+%description devel -l es.UTF-8
+Archivos de inclusiÃ³n del %{name}.
 
-%description devel -l pl
-Pliki nag³ówkowe projektu Sablotron.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe projektu Sablotron.
 
-%description devel -l pt_BR
-Salotron é um processador XSL implementado em C++.
+%description devel -l pt_BR.UTF-8
+Salotron Ã© um processador XSL implementado em C++.
 
-Arquivos de inclusão do %{name}.
+Arquivos de inclusÃ£o do %{name}.
 
 %package static
 Summary:	Sablotron static library
-Summary(es):	%{name} static libs
-Summary(pl):	Biblioteka statyczna Sablotrona
-Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com a biblioteca %{name}
+Summary(es.UTF-8):   %{name} static libs
+Summary(pl.UTF-8):   Biblioteka statyczna Sablotrona
+Summary(pt_BR.UTF-8):   Bibliotecas estÃ¡ticas para desenvolvimento com a biblioteca %{name}
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
 Sablotron static library.
 
-%description static -l es
-Bibliotecas estáticas del %{name}.
+%description static -l es.UTF-8
+Bibliotecas estÃ¡ticas del %{name}.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Bioblioteka statyczna projektu Sablotron.
 
 %prep
