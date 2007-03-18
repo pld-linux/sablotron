@@ -1,0 +1,7 @@
+- updated to 0.81 (new stable release),
+- use CXX=%{__cc} so now sablotron isn't will be linked with libstdc++ because
+  libsablotron do not uses any libstdc++ abilities,
+- as consequense above: remove libstdc++-devel from BuildRequires,
+- merge Conectiva translations,
+- libsablotron0{,-devel} added to Obsoletes for allow upgrade from MDK,
+- added lib*.la to devel %files list.
