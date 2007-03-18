@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	Procesor Transformacji XSL
 Summary(pt_BR.UTF-8):	Processador de XSL
 Name:		sablotron
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
@@ -47,6 +47,17 @@ rozpowszechniania danych w standardzie XML.
 
 %description -l pt_BR.UTF-8
 Salotron é um processador XSL implementado em C++.
+
+%package apidocs
+Summary:	Sablotron API documetation
+Summary(pl.UTF-8):	Dokumentacja API Sablotron
+Group:		Documentation
+
+%description apidocs
+Sablotron API documetation.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API Sablotron.
 
 %package devel
 Summary:	Header files for sablotron library
@@ -127,9 +138,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libsablot.so.*.*.*
 %{_mandir}/man1/*
 
-%files devel
+%files apidocs
 %defattr(644,root,root,755)
 %doc doc/apidoc/{sablot,sxp} %{?with_javascript:doc/apidoc/jsdom-ref}
+
+%files devel
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/sablot-config
 %attr(755,root,root) %{_libdir}/libsablot.so
 %{_libdir}/libsablot.la
