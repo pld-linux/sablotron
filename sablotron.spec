@@ -10,7 +10,7 @@ Version:	1.0.3
 Release:	1
 License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
-#Source0Download:	http://www.gingerall.com/charlie/ga/xml/d_sab.xml
+#Source0Download:	http://www.gingerall.org/downloads.html
 Source0:	http://download-1.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
 # Source0-md5:	72654c4b832e7562f8240ea675577f5e
 Patch0:		%{name}-link.patch
