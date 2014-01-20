@@ -136,6 +136,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README RELEASE doc/misc/{DEBUGGER,NOTES} %{?with_javascript:README_JS}
 %attr(755,root,root) %{_bindir}/sabcmd
 %attr(755,root,root) %{_libdir}/libsablot.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libsablot.so.0
 %{_mandir}/man1/*
 
 %files apidocs
