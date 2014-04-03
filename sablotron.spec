@@ -1,13 +1,13 @@
 #
 # Conditional build:
 %bcond_with	javascript	# enable experimental JavaScript XSLT extension
-#
+
 Summary:	XSL Transformations Processor
 Summary(pl.UTF-8):	Procesor Transformacji XSL
 Summary(pt_BR.UTF-8):	Processador de XSL
 Name:		sablotron
 Version:	1.0.3
-Release:	2
+Release:	3
 License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
 #Source0Download:	http://www.gingerall.org/downloads.html
@@ -52,6 +52,9 @@ Salotron é um processador XSL implementado em C++.
 Summary:	Sablotron API documetation
 Summary(pl.UTF-8):	Dokumentacja API Sablotron
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 Sablotron API documetation.
@@ -67,7 +70,7 @@ Summary(pt_BR.UTF-8):	Arquivos de inclusão do sablotron
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel >= 1.95.6-2
-%{?with_javascript:Requires:	js-devel}
+%{?with_javascript:Requires: js-devel}
 Requires:	libstdc++-devel
 Obsoletes:	libsablotron0-devel
 
@@ -123,7 +126,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_includedir}}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/doc/html
+rm -r $RPM_BUILD_ROOT%{_docdir}/html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
