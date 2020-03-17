@@ -10,11 +10,10 @@ Version:	1.0.3
 Release:	4
 License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
-#Source0Download:	http://www.gingerall.org/downloads.html
-Source0:	http://download-1.gingerall.cz/download/sablot/Sablot-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/sablotron/Sablot-%{version}.tar.gz
 # Source0-md5:	72654c4b832e7562f8240ea675577f5e
 Patch0:		%{name}-link.patch
-URL:		http://www.gingerall.org/sablotron.html
+URL:		http://sablotron.sourceforge.net/
 BuildRequires:	autoconf >= 2.56
 BuildRequires:	automake
 BuildRequires:	expat-devel >= 1.95.6-2
