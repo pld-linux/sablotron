@@ -51,9 +51,7 @@ Salotron é um processador XSL implementado em C++.
 Summary:	Sablotron API documetation
 Summary(pl.UTF-8):	Dokumentacja API Sablotron
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 Sablotron API documetation.
