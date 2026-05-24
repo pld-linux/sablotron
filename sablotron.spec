@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	Procesor Transformacji XSL
 Summary(pt_BR.UTF-8):	Processador de XSL
 Name:		sablotron
 Version:	1.0.3
-Release:	4
+Release:	5
 License:	MPL v1.1 or GPL
 Group:		Applications/Publishing/XML
 Source0:	http://downloads.sourceforge.net/sablotron/Sablot-%{version}.tar.gz
